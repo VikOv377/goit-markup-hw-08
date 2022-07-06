@@ -47,20 +47,18 @@
                 </a>
             </li>
         </ul>
-    </div>
-
-    <!--Мобильное меню-->
-
+        
         <button type="button" class="mob-menu__button mob-menu__header-button" data-menu-open>
             <svg width="40" height="40" aria-label="Открыть мобильное меню">
                 <use class="mob-menu__icon-menu" href="./images/icons.svg#icon-mob-menu"></use>
             </svg>
         </button>
-      
-        <div class="mob-menu is-hidden" data-menu>
-        
-        <div class="mob-container">
+    </div>
 
+    <!--Мобильное меню-->
+
+        <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
         <button type="button" class="mob-menu__button mob-menu__close-button" data-menu-close>
              <svg width="40" height="40" aria-label="Закрыть мобильное меню">
                   <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close-mob-menu"></use>
@@ -68,20 +66,20 @@
         </button>
 
             <div class="mob-nav">
-                <ul class="mob-nav__list">
-                    <li class="mob-nav__item"><a class="mob-nav__link./index.html">Студия</a></li>
-                    <li class="mob-nav__item"><a class="mob-nav__link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="mob-nav__item"><a class="mob-nav__link" href="./contacts.html">Контакты</a></li>
+                <ul class="mob-nav__list list">
+                    <li class="mob-nav__item"><a class="mob-nav__link link nav--current" href="./index.html">Студия</a></li>
+                    <li class="mob-nav__item"><a class="mob-nav__link link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="mob-nav__item"><a class="mob-nav__link link" href="./contacts.html">Контакты</a></li>
                 </ul>
             </div>
 
             <div class="mob-contacts">
                 <ul class="mob-contacts__list">
                     <li class="mob-contacts__item">
-                        <a class="mob-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <a class="mob-contacts__link mob-contacts__tel" href="tel:+380961111111">+38 096 111 11 11</a>
                     </li>
                     <li class="mob-contacts__item">
-                        <a class="mob-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="mob-contacts__link mob-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
                 </ul>
             </div>
