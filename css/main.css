@@ -70,7 +70,6 @@ img {
     opacity: 1;
   }
 }
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -164,7 +163,6 @@ body {
   margin-right: auto;
   transition: background-color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .button:hover, .button:focus {
   background-color: var(--color-accent-hover);
 }
@@ -180,7 +178,7 @@ body {
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -189,11 +187,9 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
 }
-
 .logo--black {
   color: var(--black-text-color);
 }
-
 .logo--white {
   color: var(--white-text-color);
 }
@@ -232,7 +228,6 @@ body {
   cursor: pointer;
   transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .modal__close-button:hover, .modal__close-button:focus {
   fill: var(--color-hover);
 }
@@ -266,11 +261,9 @@ textarea {
   flex-direction: column;
   transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .communication-form__whole-field:not(:last-child) {
   margin-bottom: 10px;
 }
-
 .communication-form__whole-field .communication-form__label:not(:last-child) {
   margin-bottom: 4px;
   font-weight: 400;
@@ -278,7 +271,6 @@ textarea {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
 .communication-form__whole-field textarea::placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -286,7 +278,6 @@ textarea {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .communication-form__whole-field:hover, .communication-form__whole-field:focus-within {
   fill: var(--color-hover);
 }
@@ -308,7 +299,6 @@ textarea {
   outline: none;
   transition: border-color var(--transitions-time) var(--timing-function) var(--delay), box-shadow var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .communication-form__input:hover, .communication-form__input:focus-within {
   border-color: var(--color-hover);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -344,9 +334,8 @@ textarea:focus {
   justify-content: center;
   cursor: pointer;
 }
-
 .modal__agreement-text::before {
-  content: '';
+  content: "";
   display: block;
   width: 16px;
   height: 15px;
@@ -359,7 +348,7 @@ textarea:focus {
 .modal__agreement-link {
   color: var(--blue-color);
   border-bottom: 1px solid currentColor;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 .modal__checkbox:checked + .modal__agreement-text::before,
@@ -383,14 +372,12 @@ textarea:focus {
 .nav {
   color: var(--black-text-color);
 }
-
 .nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .nav .link:hover,
 .nav .link:focus {
   color: var(--color-hover);
@@ -400,10 +387,9 @@ textarea:focus {
   color: var(--color-hover);
   position: relative;
 }
-
 .nav--current::after {
   display: block;
-  content: '';
+  content: "";
   width: 100%;
   height: 4px;
   background-color: var(--color-hover);
@@ -414,7 +400,6 @@ textarea:focus {
   transform: scaleX(0);
   transition: transform var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .nav--current:hover::after, .nav--current:focus::after {
   transform: scaleX(1);
 }
@@ -448,7 +433,6 @@ textarea:focus {
   border-radius: 50%;
   transition: color var(--transitions-time) var(--timing-function) var(--delay), background-color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .social-networks__link:hover, .social-networks__link:focus {
   background-color: var(--blue-color);
   color: var(--white-text-color);
@@ -456,6 +440,14 @@ textarea:focus {
 
 .social-networks__icon {
   fill: currentColor;
+}
+
+.mob-menu__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .header {
@@ -475,16 +467,13 @@ textarea:focus {
   margin-left: auto;
   justify-content: center;
 }
-
 .contacts .contacts__link:hover,
 .contacts .contacts__link:focus {
   color: var(--color-hover);
 }
-
 .contacts .contacts__link {
   transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .contacts .contacts__item + .contacts__item {
   margin-left: 50px;
 }
@@ -527,7 +516,6 @@ textarea:focus {
   max-width: 696px;
   margin: 0 auto 30px;
 }
-
 .hero__title--white {
   color: var(--white-text-color);
 }
@@ -634,7 +622,6 @@ textarea:focus {
   border: 1px solid var(--team-social-icons);
   transition: color var(--transitions-time) var(--timing-function) var(--delay), border var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .clients-list__link:hover, .clients-list__link:focus {
   color: var(--color-hover);
   border: 1px solid var(--color-hover);
@@ -658,11 +645,9 @@ textarea:focus {
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
-.footer-adress-list__link[target="_blank"] {
+.footer-adress-list__link[target=_blank] {
   color: var(--white-text-color);
 }
-
 .footer-adress-list__link:hover, .footer-adress-list__link:focus {
   color: var(--color-hover);
 }
@@ -713,7 +698,6 @@ textarea:focus {
   letter-spacing: 0.03em;
   transition: border-color var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .subscribe__email-input:hover, .subscribe__email-input:focus {
   border-color: var(--color-hover);
 }
@@ -734,7 +718,7 @@ textarea:focus {
 }
 
 .body-portfolio {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -759,14 +743,12 @@ textarea:focus {
   padding: 6px 22px;
   transition: color var(--transitions-time) var(--timing-function) var(--delay), background-color var(--transitions-time) var(--timing-function) var(--delay), box-shadow var(--transitions-time) var(--timing-function) var(--delay), border-radius var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .choice__button-radio:hover, .choice__button-radio:focus {
   color: var(--white-text-color);
   background-color: var(--color-hover);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3), 0px 1px 10px rgba(0, 0, 0, 0.3), 0px 2px 10px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
-
 .choice__button-radio .nav--current {
   background-color: var(--color-hover);
   color: var(--white-text-color);
@@ -785,7 +767,7 @@ textarea:focus {
 .about-project__name {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2.00;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--black-text-color);
   margin-bottom: 4px;
@@ -800,13 +782,10 @@ textarea:focus {
   flex-direction: column;
   transition: box-shadow var(--transitions-time) var(--timing-function) var(--delay);
 }
-
 .projects-list__link:hover, .projects-list__link:focus {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.3), 1px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-.projects-list__link:hover .project-overlay,
-.projects-list__link:focus .project-overlay {
+.projects-list__link:hover .project-overlay, .projects-list__link:focus .project-overlay {
   transform: translateY(0);
 }
 
@@ -848,5 +827,4 @@ textarea:focus {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-text-color);
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

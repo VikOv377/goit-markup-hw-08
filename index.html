@@ -19,36 +19,108 @@
     
 <!--Шапка сайта-->
     
-    <header class="header">
-        <div class="container menu">
-            <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo--black">Studio</span></a>
-            
-            <nav class="nav">
+<header class="header">
+    <div class="container menu">
+        <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo--black">Studio</span></a>
+
+        <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="./index.html" class="link nav--current">Студия</a></li>
                 <li class="nav__item"><a href="./portfolio.html" class="link">Портфолио</a></li>
                 <li class="nav__item"><a href="./contacts.html" class="link">Контакты</a></li>
             </ul>
-            </nav>
-        
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#envelope"></use>
-                        </svg>info@devstudio.com
-                    </a>
-                </li>
-                <li class="contacts__item">
-                    <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10" height="16">
+        </nav>
+
+        <ul class="contacts">
+            <li class="contacts__item">
+                <a class="contacts__link" href="mailto:info@devstudio.com">
+                    <svg class="contacts__icon" width="16" height="12">
+                        <use href="./images/icons.svg#envelope"></use>
+                    </svg>info@devstudio.com
+                </a>
+            </li>
+            <li class="contacts__item">
+                <a class="contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10" height="16">
                         <use href="./images/icons.svg#smartphone"></use>
                     </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+                    +38 096 111 11 11
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Мобильное меню-->
+
+    <div class="mob-menu is-hidden" data-menu>
+
+        <button type="button" class="mob-menu__button is-open">
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close-mob-menu"></use>
+                <use class="mobe-menu__icon-menu" href="./images/icons.svg#icon-mob-menu"></use>
+            </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+
+            <div class="mob-nav">
+                <ul class="mob-nav__list">
+                    <li class="mob-nav__item"><a class="mob-nav__link./index.html">Студия</a></li>
+                    <li class="mob-nav__item"><a class="mob-nav__link" href="./portfolio.html">Портфолио</a></li>
+                    <li class="mob-nav__item"><a class="mob-nav__link" href="./contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="mob-contacts">
+                <ul class="mob-contacts__list">
+                    <li class="mob-contacts__item">
+                        <a class="mob-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mob-contacts__item">
+                        <a class="mob-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mob-social">
+                <ul class="mob-social__list">
+
+                    <li class="mob-social__item">
+                        <a class="mob-social__link" aria-label="Ссылка на Instagram" href="https://www.instagram.com/"
+                            target="_blank" rel="noreferrer nofollow noopener">
+                            <span class="visually-hidden" lang="en">Instagram</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+
+                    <li class="mob-social__item">
+                        <a class="mob-social__link" aria-label="Ссылка на Twitter" href="https://twitter.com/"
+                            target="_blank" rel="noreferrer nofollow noopener">
+                            <span class="visually-hidden" lang="en">Twitter</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+
+                    <li class="mob-social__item__item">
+                        <a class="mob-social__link" aria-label="Ссылка на Facebook" href="https://www.facebook.com/"
+                            target="_blank" rel="noreferrer nofollow noopener">
+                            <span class="visually-hidden" lang="en">Facebook</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+
+                    <li class="mob-social__item__item">
+                        <a class="mob-social__link" aria-label="Ссылка на Linkedin" href="https://www.linkedin.com/"
+                            target="_blank" rel="noreferrer nofollow noopener">
+                            <span class="visually-hidden" lang="en">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </div>
+
+</header>
+
 
 <!--Основная часть-->
     
