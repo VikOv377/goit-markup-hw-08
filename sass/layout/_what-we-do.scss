@@ -1,0 +1,34 @@
+.what-we-do {
+    padding-top: 0;
+}
+
+.what-we-do__list {
+    --card__item: 3;
+}
+
+.what-we-do__thumb {
+    position: relative;
+
+    display: flex;
+}
+
+.what-we-do__overlay {
+    position: absolute;
+    
+    @include centeredFlex();
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.what-we-do__description {
+    position: absolute;
+
+    text-align: center;
+    color: var(--white-text-color);
+}

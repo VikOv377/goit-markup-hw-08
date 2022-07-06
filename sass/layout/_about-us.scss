@@ -1,0 +1,17 @@
+.about-us__header {
+    color: var(--black-text-color);
+    margin-bottom: 10px;
+}
+
+.about-us__label {
+    background-color: var(--color-our-team-section);
+    border-radius: 4px;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    @include centeredFlex();
+}
+
+.about-us__svg {
+    animation: appear 10s linear infinite;
+}

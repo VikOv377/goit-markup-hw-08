@@ -1,0 +1,14 @@
+.card__set {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: calc(-1 * var(--card-gap-left));
+    margin-top: calc(-1 * var(--card-gap-top));
+}
+
+.card__item {
+    margin-left: var(--card-gap-left);
+    margin-top: var(--card-gap-top);
+
+    width: calc(100% / var(--card__item) - var(--card-gap-left));
+}
