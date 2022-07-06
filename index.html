@@ -51,16 +51,21 @@
 
     <!--Мобильное меню-->
 
-    <div class="mob-menu is-hidden" data-menu>
-
-        <button type="button" class="mob-menu__button is-open">
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close-mob-menu"></use>
-                <use class="mobe-menu__icon-menu" href="./images/icons.svg#icon-mob-menu"></use>
+        <button type="button" class="mob-menu__button mob-menu__header-button" data-menu-open>
+            <svg width="40" height="40" aria-label="Открыть мобильное меню">
+                <use class="mob-menu__icon-menu" href="./images/icons.svg#icon-mob-menu"></use>
             </svg>
         </button>
+      
+        <div class="mob-menu is-hidden" data-menu>
+        
+        <div class="mob-container">
 
-        <div class="menu-container" id="menu-container" data-menu>
+        <button type="button" class="mob-menu__button mob-menu__close-button" data-menu-close>
+             <svg width="40" height="40" aria-label="Закрыть мобильное меню">
+                  <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close-mob-menu"></use>
+              </svg>
+        </button>
 
             <div class="mob-nav">
                 <ul class="mob-nav__list">
@@ -87,34 +92,32 @@
                     <li class="mob-social__item">
                         <a class="mob-social__link" aria-label="Ссылка на Instagram" href="https://www.instagram.com/"
                             target="_blank" rel="noreferrer nofollow noopener">
-                            <span class="visually-hidden" lang="en">Instagram</span>
+                            <span lang="en">Instagram</span>
                         </a>
-                        <span class="line">|</span>
                     </li>
 
                     <li class="mob-social__item">
                         <a class="mob-social__link" aria-label="Ссылка на Twitter" href="https://twitter.com/"
                             target="_blank" rel="noreferrer nofollow noopener">
-                            <span class="visually-hidden" lang="en">Twitter</span>
+                            <span lang="en">Twitter</span>
                         </a>
-                        <span class="line">|</span>
                     </li>
 
                     <li class="mob-social__item__item">
                         <a class="mob-social__link" aria-label="Ссылка на Facebook" href="https://www.facebook.com/"
                             target="_blank" rel="noreferrer nofollow noopener">
-                            <span class="visually-hidden" lang="en">Facebook</span>
+                            <span lang="en">Facebook</span>
                         </a>
-                        <span class="line">|</span>
                     </li>
 
                     <li class="mob-social__item__item">
                         <a class="mob-social__link" aria-label="Ссылка на Linkedin" href="https://www.linkedin.com/"
                             target="_blank" rel="noreferrer nofollow noopener">
-                            <span class="visually-hidden" lang="en">Linkedin</span>
+                            <span lang="en">Linkedin</span>
                         </a>
                     </li>
                 </ul>
+            </div>
             </div>
         </div>
     </div>
@@ -613,5 +616,6 @@
       </div>
     </div>
       <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
   </body>
 </html>

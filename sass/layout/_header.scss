@@ -6,12 +6,20 @@
 
 .menu {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    align-items: center;
 }
 
+/*.menu {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}*/
 
 .contacts {
+    display: none;
+}
+
+/*.contacts {
     display: flex;
     margin-left: auto;
     justify-content: center;
@@ -28,7 +36,7 @@
     .contacts__item + .contacts__item {
         margin-left: 50px;
     }
-}
+}*/
 
 .contacts__link {
     @extend %link;

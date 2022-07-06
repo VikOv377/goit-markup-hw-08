@@ -1,7 +1,66 @@
 .mob-menu__button {
-    display: inline-flex;
+    display: block;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
 }
+
+.mob-menu__header-button {
+    margin-left: auto;
+
+    transition: fill var(--transitions-time) var(--timing-function) var(--delay);
+
+    &:hover,
+    &:focus {
+        fill: var(--color-hover);
+    }
+
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white-text-color);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0%);
+
+    transition: transform var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.mob-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+.mob-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 48px 40px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.mob-menu__close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    
+    transition: fill var(--transitions-time) var(--timing-function) var(--delay);
+
+    &:hover,
+    &:focus {
+        fill: var(--color-hover);
+    }
+}
+
+

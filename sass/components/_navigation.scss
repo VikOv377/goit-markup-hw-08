@@ -1,4 +1,9 @@
 .nav {
+    display: none;
+}
+
+/*.nav {
+    display: none;
     color: var(--black-text-color);
 
     .link {
@@ -14,7 +19,7 @@
         color: var(--color-hover);
     }
 
-}
+}*/
 
 .nav--current {
     color: var(--color-hover);
