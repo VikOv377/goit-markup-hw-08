@@ -13,7 +13,7 @@
   --card-gap-top: 30px;
   --card-gap-left: 30px;
   --team-social-icons: #AFB1B8;
-  --card__item: 4;
+  --card__item: 1;
   --transitions-time: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --delay: 0ms;
@@ -792,8 +792,23 @@ textarea:focus {
 .about-us__header {
   color: var(--black-text-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .about-us__header {
+    text-align: start;
+  }
+}
+.about-us__description {
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .about-us__description {
+    text-align: start;
+  }
+}
 .about-us__label {
   background-color: var(--color-our-team-section);
   border-radius: 4px;
@@ -808,6 +823,12 @@ textarea:focus {
   animation: appear 10s linear infinite;
 }
 
+@media screen and (min-width: 768px) {
+  .about-us__list {
+    --card__item: 2;
+    width: calc((100% - var(--card-gap-left) * 1) / var(--card__item));
+  }
+}
 .what-we-do {
   padding-top: 0;
 }

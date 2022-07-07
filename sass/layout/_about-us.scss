@@ -1,6 +1,23 @@
 .about-us__header {
     color: var(--black-text-color);
     margin-bottom: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .about-us__header {
+        text-align: start;
+    }
+}
+
+.about-us__description {
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .about-us__description {
+        text-align: start;
+    }
 }
 
 .about-us__label {
@@ -15,3 +32,11 @@
 .about-us__svg {
     animation: appear 10s linear infinite;
 }
+
+@media screen and (min-width: 768px) {
+    .about-us__list {
+        --card__item: 2;
+        width: calc((100% - var(--card-gap-left) * 1) / var(--card__item));
+    }
+}
+
