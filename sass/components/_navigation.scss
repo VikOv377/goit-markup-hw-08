@@ -2,24 +2,25 @@
     display: none;
 }
 
-/*.nav {
-    display: none;
-    color: var(--black-text-color);
-
-    .link {
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
+@media screen and (min-width: 768px) {
+    .nav {
+        color: var(--black-text-color);
     
-        transition: color var(--transitions-time) var(--timing-function) var(--delay);
+        .link {
+            display: block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        
+            transition: color var(--transitions-time) var(--timing-function) var(--delay);
+            }
+        
+        .link:hover,
+        .link:focus {
+            color: var(--color-hover);
         }
     
-    .link:hover,
-    .link:focus {
-        color: var(--color-hover);
     }
-
-}*/
+}
 
 .nav--current {
     color: var(--color-hover);

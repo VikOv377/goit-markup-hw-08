@@ -8,6 +8,12 @@
 
 }
 
+@media screen and (min-width: 768px) {
+    .mob-menu__button {
+        display: none;
+    }
+}
+
 .mob-menu__header-button {
     position: absolute;
     top: 10px;
@@ -51,6 +57,7 @@
     padding-left: 40px;
     padding-top: 48px;
     padding-bottom: 48px;
+    padding-right: 10px;
     
     height: 100%;
     overflow-y: auto;
@@ -75,6 +82,7 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--black-text-color);
+    padding-bottom: 4px;
 
     &:hover,
     &:focus {
@@ -82,23 +90,63 @@
     }
 }
 
-.mob-nav__item:not(:last-child),
+/*.mob-nav__item:not(:last-child),
 .mob-contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+}*/
+
+.mob-nav__item,
+.mob-contacts__item {
     margin-bottom: 32px;
 }
 
 .mob-contacts__tel {
+    @extend %link;
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
-    color: var(--color-hover);
+    color: var(--color-accent-hover);
 }
 
 .mob-contacts__mail {
+    @extend %link;
+    
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-    color: currentColor;
+    color: var(--main-text-color);
+
+    &:hover,
+    &:focus {
+        color: var(--color-hover)
+    }
 }
+
+.mob-social__link {
+    @extend %link;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: var(--color-hover);
+    padding-bottom: 4px;
+
+    &:hover,
+    &:focus {
+        color: var(--color-accent-hover);
+    }
+}
+
+.mob-social__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mob-social__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+}
+

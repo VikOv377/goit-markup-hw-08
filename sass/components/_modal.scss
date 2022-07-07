@@ -1,25 +1,44 @@
 .modal {
     position: absolute;
-
+    
     top: 50%;
     left: 50%;
-
-    min-width: 528px;
-    min-height: 581px;
+        
+    width: 100%;
+        
+    max-width: 450px;
+    height: 100%;
+    max-height: 609px;
     background-color: var(--white-text-color);
     box-shadow:
-        0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+            0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px 39px 40px 41px;
-
+    padding: 40px;
+        
     transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
 
+    opacity: 1;
+    
     transition:
-        transform var(--transitions-time) var(--timing-function) var(--delay),
-        opacity var(--transitions-time) var(--timing-function) var(--delay);
+    transform var(--transitions-time) var(--timing-function) var(--delay),
+    opacity var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+@media screen and (max-height: 609px) {
+    .modal {
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+     .modal {
+        min-width: 528px;
+        min-height: 581px;
+        
+        padding: 40px 39px 40px 41px;
+    }
 }
 
 .modal__close-button {
@@ -172,6 +191,7 @@ textarea:focus {
     @include centeredFlex();
 
     cursor: pointer;
+    font-size: 12px;
 
     &::before {
         content: '';
@@ -180,7 +200,7 @@ textarea:focus {
     
         width: 16px;
         height: 15px;
-    
+
         margin-right: 8px;
     
         border: 2px solid var(--black-text-color);
@@ -191,10 +211,24 @@ textarea:focus {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .modal__agreement-text {
+        font-size: 14px;
+    }
+}
+
 .modal__agreement-link {
     color: var(--blue-color);
     border-bottom: 1px solid currentColor;
     line-height: 1.0;
+
+    transition:
+            color var(--transitions-time) var(--timing-function) var(--delay);
+
+    &:hover,
+    &:focus {
+        color: var(--color-accent-hover);
+    }
 }
 
 .modal__checkbox:checked + .modal__agreement-text::before,

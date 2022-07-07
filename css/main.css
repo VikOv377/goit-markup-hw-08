@@ -9,6 +9,7 @@
   --color-our-team-section: #F5F4FA;
   --color-of-portfolio-box: #EEEEEE;
   --gap-after-h2: 50px;
+  --mob-gap-after-h2: 30px;
   --card-gap-top: 30px;
   --card-gap-left: 30px;
   --team-social-icons: #AFB1B8;
@@ -55,7 +56,7 @@ img {
   overflow: hidden;
 }
 
-.contacts__link {
+.contacts__link, .mob-social__link, .mob-contacts__mail, .mob-contacts__tel {
   text-decoration: none;
   color: inherit;
 }
@@ -79,6 +80,9 @@ body {
   min-height: 100vh;
 }
 
+/*body.no-scroll {
+    position: fixed;
+}*/
 .link {
   text-decoration: none;
   color: inherit;
@@ -98,19 +102,33 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .section__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+  letter-spacing: 0.03em;
   color: var(--black-text-color);
-  margin-bottom: var(--gap-after-h2);
+  margin-bottom: var(--mob-gap-after-h2);
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: var(--gap-after-h2);
+  }
+}
 .item__title {
   font-size: 14px;
   font-weight: 700;
@@ -177,6 +195,21 @@ body {
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -201,21 +234,45 @@ body {
   /*margin-right: 93px;*/
 }
 
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 609px;
   background-color: var(--white-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 39px 40px 41px;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   transition: transform var(--transitions-time) var(--timing-function) var(--delay), opacity var(--transitions-time) var(--timing-function) var(--delay);
 }
 
+@media screen and (max-height: 609px) {
+  .modal {
+    overflow-y: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+    padding: 40px 39px 40px 41px;
+  }
+}
 .modal__close-button {
   display: flex;
   align-items: center;
@@ -336,6 +393,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 12px;
 }
 .modal__agreement-text::before {
   content: "";
@@ -348,10 +406,19 @@ textarea:focus {
   transition: border var(--transitions-time) var(--timing-function) var(--delay);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal__agreement-text {
+    font-size: 14px;
+  }
+}
 .modal__agreement-link {
   color: var(--blue-color);
   border-bottom: 1px solid currentColor;
   line-height: 1;
+  transition: color var(--transitions-time) var(--timing-function) var(--delay);
+}
+.modal__agreement-link:hover, .modal__agreement-link:focus {
+  color: var(--color-accent-hover);
 }
 
 .modal__checkbox:checked + .modal__agreement-text::before,
@@ -376,24 +443,21 @@ textarea:focus {
   display: none;
 }
 
-/*.nav {
-    display: none;
+@media screen and (min-width: 768px) {
+  .nav {
     color: var(--black-text-color);
-
-    .link {
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-
-        transition: color var(--transitions-time) var(--timing-function) var(--delay);
-        }
-
-    .link:hover,
-    .link:focus {
-        color: var(--color-hover);
-    }
-
-}*/
+  }
+  .nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color var(--transitions-time) var(--timing-function) var(--delay);
+  }
+  .nav .link:hover,
+.nav .link:focus {
+    color: var(--color-hover);
+  }
+}
 .nav--current {
   color: var(--color-hover);
   position: relative;
@@ -462,6 +526,11 @@ textarea:focus {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+  .mob-menu__button {
+    display: none;
+  }
+}
 .mob-menu__header-button {
   position: absolute;
   top: 10px;
@@ -499,6 +568,7 @@ textarea:focus {
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
+  padding-right: 10px;
   height: 100%;
   overflow-y: auto;
 }
@@ -519,13 +589,18 @@ textarea:focus {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--black-text-color);
+  padding-bottom: 4px;
 }
 .mob-nav__link:hover, .mob-nav__link:focus {
   color: var(--color-hover);
 }
 
-.mob-nav__item:not(:last-child),
+/*.mob-nav__item:not(:last-child),
 .mob-contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+}*/
+.mob-nav__item,
+.mob-contacts__item {
   margin-bottom: 32px;
 }
 
@@ -534,15 +609,41 @@ textarea:focus {
   font-size: 34px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  color: var(--color-hover);
+  color: var(--color-accent-hover);
 }
 
 .mob-contacts__mail {
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
-  color: currentColor;
+  color: var(--main-text-color);
+}
+.mob-contacts__mail:hover, .mob-contacts__mail:focus {
+  color: var(--color-hover);
+}
+
+.mob-social__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: var(--color-hover);
+  padding-bottom: 4px;
+}
+.mob-social__link:hover, .mob-social__link:focus {
+  color: var(--color-accent-hover);
+}
+
+.mob-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mob-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .header {
@@ -550,6 +651,8 @@ textarea:focus {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid #ECECEC;
+  width: 100%;
 }
 
 .menu {
