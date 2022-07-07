@@ -824,42 +824,54 @@ textarea:focus {
 }
 
 @media screen and (min-width: 768px) {
-  .about-us__list {
+  .our-team-list__item {
     --card__item: 2;
-    width: calc((100% - var(--card-gap-left) * 1) / var(--card__item));
+    width: calc(100% / var(--card__item) - var(--card-gap-left));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-team-list__item {
+    --card__item: 4;
+    width: calc(100% / var(--card__item) - var(--card-gap-left));
   }
 }
 .what-we-do {
-  padding-top: 0;
+  display: none;
 }
 
-.what-we-do__list {
-  --card__item: 3;
-}
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: flex;
+    padding-top: 0;
+  }
 
-.what-we-do__thumb {
-  position: relative;
-  display: flex;
-}
+  .what-we-do__list {
+    --card__item: 3;
+  }
 
-.what-we-do__overlay {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-}
+  .what-we-do__thumb {
+    position: relative;
+    display: flex;
+  }
 
-.what-we-do__description {
-  position: absolute;
-  text-align: center;
-  color: var(--white-text-color);
-}
+  .what-we-do__overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 
+  .what-we-do__description {
+    position: absolute;
+    text-align: center;
+    color: var(--white-text-color);
+  }
+}
 .our-team {
   background-color: var(--color-our-team-section);
   width: auto;
@@ -897,10 +909,18 @@ textarea:focus {
   margin-bottom: 0;
 }
 
-.clients-list {
-  --card__item: 6;
+@media screen and (min-width: 768px) {
+  .about-us__item {
+    --card__item: 2;
+    width: calc(100% / var(--card__item) - var(--card-gap-left));
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .about-us__item {
+    --card__item: 4;
+    width: calc(100% / var(--card__item) - var(--card-gap-left));
+  }
+}
 .clients-list__link {
   display: flex;
   align-items: center;
@@ -921,14 +941,24 @@ textarea:focus {
   fill: currentColor;
 }
 
+.clients-list {
+  --card__item: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list {
+    --card__item: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    --card__item: 6;
+  }
+}
 .footer {
   background-color: var(--hero-color);
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.footer-column:not(:last-child) {
-  margin-right: 70px;
 }
 
 .footer-adress-list__link {
@@ -942,10 +972,45 @@ textarea:focus {
   color: var(--color-hover);
 }
 
+.footer-container {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  .footer-wrap-two-columns {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+
+  .footer-column:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  .footer-container {
+    text-align: start;
+  }
+
+  .adress {
+    margin-right: 0;
+  }
+}
 .adress {
   font-style: normal;
   width: 231px;
-  margin-right: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer__logo {
@@ -963,24 +1028,22 @@ textarea:focus {
   margin-bottom: 20px;
 }
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.footer-column:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 .subscribe {
-  display: flex;
+  display: block;
 }
 
 .subscribe__email-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   outline: none;
   color: var(--white-text-color);
   font-size: 16px;
@@ -992,6 +1055,18 @@ textarea:focus {
   border-color: var(--color-hover);
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subscribe__email-input {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
 .subscribe input::placeholder {
   font-size: 16px;
   line-height: 1.25;

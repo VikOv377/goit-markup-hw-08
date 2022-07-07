@@ -38,3 +38,17 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+@media screen and (min-width: 768px) {
+    .about-us__item {
+        --card__item: 2;
+        width: calc(100% / var(--card__item) - var(--card-gap-left));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-us__item {
+        --card__item: 4;
+        width: calc(100% / var(--card__item) - var(--card-gap-left));
+    }
+}
