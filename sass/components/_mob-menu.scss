@@ -37,10 +37,17 @@
     height: 100vh;
     z-index: 1;
     opacity: 1;
+    overflow-y: auto;
     
     transform: translateX(0%);
 
     transition: transform var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+@media screen and (min-width: 320px) {
+    .mob-menu {
+        overflow-x: hidden;
+    }
 }
 
 .mob-menu.is-hidden {
@@ -60,7 +67,6 @@
     padding-right: 10px;
     
     height: 100%;
-    overflow-y: auto;
 }
 
 .mob-menu__close-button {
