@@ -21,37 +21,112 @@
 
     <!--Шапка сайта-->
 
-    <header class="header">
-        <div class="container menu">
-            <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo--black">Studio</span></a>
-    
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="./index.html" class="link">Студия</a></li>
-                    <li class="nav__item"><a href="./portfolio.html" class="link nav--current">Портфолио</a></li>
-                    <li class="nav__item"><a href="./contacts.html" class="link">Контакты</a></li>
-                </ul>
-            </nav>
-    
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="link contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#envelope"></use>
-                        </svg>info@devstudio.com
-                    </a>
-                </li>
-                <li class="contacts__item">
-                    <a class="link contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10"
-                            height="16">
-                            <use href="./images/icons.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
+<header class="header">
+    <div class="container menu">
+        <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo--black">Studio</span></a>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="link nav--current">Студия</a></li>
+                <li class="nav__item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                <li class="nav__item"><a href="./contacts.html" class="link">Контакты</a></li>
             </ul>
+        </nav>
+
+        <ul class="contacts">
+            <li class="contacts__item">
+                <a class="contacts__link link" href="mailto:info@devstudio.com">
+                    <svg class="contacts__icon" width="16" height="12">
+                        <use href="./images/icons.svg#envelope"></use>
+                    </svg>info@devstudio.com
+                </a>
+            </li>
+            <li class="contacts__item">
+                <a class="contacts__link link" href="tel:+380961111111"><svg class="contacts__icon" width="10"
+                        height="16">
+                        <use href="./images/icons.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                </a>
+            </li>
+        </ul>
+
+        <button type="button" class="mob-menu__button mob-menu__header-button" data-menu-open>
+            <svg width="40" height="40" aria-label="Открыть мобильное меню">
+                <use class="mob-menu__icon-menu" href="./images/icons.svg#icon-mob-menu"></use>
+            </svg>
+        </button>
+    </div>
+
+    <!--Мобильное меню-->
+
+    <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+            <button type="button" class="mob-menu__button mob-menu__close-button" data-menu-close>
+                <svg width="40" height="40" aria-label="Закрыть мобильное меню">
+                    <use class="mob-menu__icon-close" href="./images/icons.svg#icon-close-mob-menu"></use>
+                </svg>
+            </button>
+
+            <div class="mob-nav">
+                <ul class="mob-nav__list list">
+                    <li class="mob-nav__item"><a class="mob-nav__link link nav--current" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mob-nav__item"><a class="mob-nav__link link nav--current"
+                            href="./portfolio.html">Портфолио</a></li>
+                    <li class="mob-nav__item"><a class="mob-nav__link link nav--current"
+                            href="./contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="mob-contacts">
+                <ul class="mob-contacts__list">
+                    <li class="mob-contacts__item">
+                        <a class="mob-contacts__link mob-contacts__tel" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mob-contacts__item">
+                        <a class="mob-contacts__link mob-contacts__mail"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mob-social">
+                <ul class="mob-social__list">
+                    <li class="mob-social__item">
+                        <a class="mob-social__link nav--current" aria-label="Ссылка на Instagram"
+                            href="https://www.instagram.com/" target="_blank" rel="noreferrer nofollow noopener">
+                            <span lang="en">Instagram</span>
+                        </a>
+                    </li>
+
+                    <li class="mob-social__item">
+                        <a class="mob-social__link nav--current" aria-label="Ссылка на Twitter"
+                            href="https://twitter.com/" target="_blank" rel="noreferrer nofollow noopener">
+                            <span lang="en">Twitter</span>
+                        </a>
+                    </li>
+
+                    <li class="mob-social__item">
+                        <a class="mob-social__link nav--current" aria-label="Ссылка на Facebook"
+                            href="https://www.facebook.com/" target="_blank" rel="noreferrer nofollow noopener">
+                            <span lang="en">Facebook</span>
+                        </a>
+                    </li>
+
+                    <li class="mob-social__item">
+                        <a class="mob-social__link nav--current" aria-label="Ссылка на Linkedin"
+                            href="https://www.linkedin.com/" target="_blank" rel="noreferrer nofollow noopener">
+                            <span lang="en">Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </div>
+    </div>
+
+</header>
 
     <!--Основная часть-->
 
@@ -72,8 +147,16 @@
             
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
-                  <div class="projects-list__thumb">
-                    <img src="./images/portfolio/kryak.jpg" alt="Ноутбук" width="370" height="294">                
+                  <div class="projects-list__thumb">                
+                    <picture>
+                        <source srcset="./images/portfolio/computer-mob-1x.jpg 1x,
+                                        ./images/portfolio/computer-mob-2x.jpg 2x" media="(max-width: 576px)">
+                        <source srcset="./images/portfolio/computer-tablet-1x.jpg 1x,
+                                        ./images/portfolio/computer-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                        <source srcset="./images/portfolio/computer-desk-1x.jpg 1x,
+                                        ./images/portfolio/computer-desk-2x.jpg 2x" media="(min-width: 960px)">
+                        <img src="./images/portfolio/computer-mob-1x.jpg" alt="Ноутбук" width="370" height="294">
+                    </picture>
                     <div class="project-overlay">
                     <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                     </div>
@@ -88,7 +171,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/poster.jpg" alt="Постер Игра в баскетбол" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/poster-mob-1x.jpg 1x,
+                                            ./images/portfolio/poster-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/poster-tablet-1x.jpg 1x,
+                                            ./images/portfolio/poster-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/poster-desk-1x.jpg 1x,
+                                            ./images/portfolio/poster-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/poster-mob-1x.jpg" alt="Постер Игра в баскетбол" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -104,7 +195,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/restaurant.jpg" alt="Логотип ресторана" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/restaurant-mob-1x.jpg 1x,
+                                            ./images/portfolio/restaurant-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/restaurant-tablet-1x.jpg 1x,
+                                            ./images/portfolio/restaurant-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/restaurant-desk-1x.jpg 1x,
+                                            ./images/portfolio/restaurant-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/restaurant-mob-1x.jpg" alt="Логотип ресторана" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -120,7 +219,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/headphones.jpg" alt="Наушники" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/headphones-mob-1x.jpg 1x,
+                                            ./images/portfolio/headphones-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/headphones-tablet-1x.jpg 1x,
+                                            ./images/portfolio/headphones-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/headphones-desk-1x.jpg 1x,
+                                            ./images/portfolio/headphones-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/headphones-mob-1x.jpg" alt="Наушники" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -136,7 +243,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/boxes.jpg" alt="Бумажные коробочки" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/boxes-mob-1x.jpg 1x,
+                                            ./images/portfolio/boxes-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/boxes-tablet-1x.jpg 1x,
+                                            ./images/portfolio/boxes-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/boxes-desk-1x.jpg 1x,
+                                            ./images/portfolio/boxes-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/boxes-mob-1x.jpg" alt="Бумажные коробочки" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -152,7 +267,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/desktop.jpg" alt="Монитор компьютера" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop-mob-1x.jpg 1x,
+                                            ./images/portfolio/desktop-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/desktop-tablet-1x.jpg 1x,
+                                            ./images/portfolio/desktop-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/desktop-desk-1x.jpg 1x,
+                                            ./images/portfolio/desktop-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/desktop-mob-1x.jpg" alt="Монитор компьютера" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -168,7 +291,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/magazine.jpg" alt="Открытый журнал" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/magazine-mob-1x.jpg 1x,
+                                            ./images/portfolio/magazine-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/magazine-tablet-1x.jpg 1x,
+                                            ./images/portfolio/magazine-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/magazine-desk-1x.jpg 1x,
+                                            ./images/portfolio/magazine-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/magazine-mob-1x.jpg" alt="Открытый журнал" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -184,7 +315,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/label.jpg" alt="Бирка" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/label-mob-1x.jpg 1x,
+                                            ./images/portfolio/label-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/label-tablet-1x.jpg 1x,
+                                            ./images/portfolio/label-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/label-desk-1x.jpg 1x,
+                                            ./images/portfolio/label-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/label-mob-1x.jpg" alt="Бирка" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -200,7 +339,15 @@
             <li class="projects-list__item card__item">
                 <a class="link projects-list__link" href="https://www.google.com/" target="_blank" rel="noreferrer nofollow noopener">
                     <div class="projects-list__thumb">
-                        <img src="./images/portfolio/laptop.jpg" alt="Работа за ноутбуком" width="370" height="294">
+                        <picture>
+                            <source srcset="./images/portfolio/laptop-mob-1x.jpg 1x,
+                                            ./images/portfolio/laptop-mob-2x.jpg 2x" media="(max-width: 576px)">
+                            <source srcset="./images/portfolio/laptop-tablet-1x.jpg 1x,
+                                            ./images/portfolio/laptop-tablet-2x.jpg 2x" media="(min-width: 577px)">
+                            <source srcset="./images/portfolio/laptop-desk-1x.jpg 1x,
+                                            ./images/portfolio/laptop-desk-2x.jpg 2x" media="(min-width: 960px)">
+                            <img src="./images/portfolio/laptop-mob-1x.jpg" alt="Работа за ноутбуком" width="370" height="294">
+                        </picture>
                         <div class="project-overlay">
                             <p class="project-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
                                 это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -292,5 +439,6 @@
         </div>
     </div>
 </footer>
+<script src="./js/menu.js"></script>
 </body>
 </html>

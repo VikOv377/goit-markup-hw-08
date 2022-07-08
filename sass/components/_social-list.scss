@@ -5,8 +5,10 @@
 
 .social-networks {
     justify-content: center;
+    --card__item: 4;
     --card-gap-left: 10px;
     --card-gap-top: 10px;
+    
 }
 
 .social-networks__link {
