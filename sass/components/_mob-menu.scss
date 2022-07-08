@@ -26,7 +26,6 @@
     &:focus {
         fill: var(--color-hover);
     }
-
 }
 
 .mob-menu {
@@ -38,6 +37,7 @@
     height: 100vh;
     z-index: 1;
     opacity: 1;
+    
     transform: translateX(0%);
 
     transition: transform var(--transitions-time) var(--timing-function) var(--delay);
@@ -84,6 +84,8 @@
     color: var(--black-text-color);
     padding-bottom: 4px;
 
+    transition: color var(--transitions-time) var(--timing-function) var(--delay);
+
     &:hover,
     &:focus {
         color: var(--color-hover);
@@ -118,6 +120,8 @@
     letter-spacing: 0.02em;
     color: var(--main-text-color);
 
+    transition: color var(--transitions-time) var(--timing-function) var(--delay);
+
     &:hover,
     &:focus {
         color: var(--color-hover)
@@ -132,6 +136,8 @@
     letter-spacing: 0.02em;
     color: var(--color-hover);
     padding-bottom: 4px;
+
+    transition: color var(--transitions-time) var(--timing-function) var(--delay);
 
     &:hover,
     &:focus {

@@ -498,6 +498,9 @@ textarea:focus {
   --card__item: 4;
   --card-gap-left: 10px;
   --card-gap-top: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social-networks__link {
@@ -592,6 +595,7 @@ textarea:focus {
   letter-spacing: 0.02em;
   color: var(--black-text-color);
   padding-bottom: 4px;
+  transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 .mob-nav__link:hover, .mob-nav__link:focus {
   color: var(--color-hover);
@@ -620,6 +624,7 @@ textarea:focus {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 .mob-contacts__mail:hover, .mob-contacts__mail:focus {
   color: var(--color-hover);
@@ -632,6 +637,7 @@ textarea:focus {
   letter-spacing: 0.02em;
   color: var(--color-hover);
   padding-bottom: 4px;
+  transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 .mob-social__link:hover, .mob-social__link:focus {
   color: var(--color-accent-hover);
