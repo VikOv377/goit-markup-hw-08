@@ -61,10 +61,7 @@
     flex-direction: column;
     justify-content: space-between;
     
-    padding-left: 40px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-right: 10px;
+    padding: 48px 40px;
     
     height: 100%;
 }
@@ -98,14 +95,13 @@
     }
 }
 
-/*.mob-nav__item:not(:last-child),
+.mob-nav__item:not(:last-child),
 .mob-contacts__item:not(:last-child) {
     margin-bottom: 32px;
-}*/
+}
 
-.mob-nav__item,
-.mob-contacts__item {
-    margin-bottom: 32px;
+.mob-contacts {
+    margin-bottom: 64px;
 }
 
 .mob-contacts__tel {

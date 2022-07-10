@@ -146,7 +146,6 @@
 .projects-list__thumb {
     position: relative;
     overflow: hidden;
-
     display: flex;
 }
 
@@ -155,11 +154,9 @@
 
     width: 100%;
     height: 100%;
-    
-    opacity: 0;
 
     background-color: rgba(33, 150, 243, 0.9);
-
+    
     transform: translateY(100%);
 
     transition:
@@ -180,6 +177,7 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--white-text-color);
+
     overflow: auto;
 }
 
