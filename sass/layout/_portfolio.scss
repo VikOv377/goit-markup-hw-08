@@ -125,6 +125,7 @@
     &:hover .project-overlay,
     &:focus .project-overlay {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -155,12 +156,15 @@
     width: 100%;
     height: 100%;
 
+    opacity: 0;
+
     background-color: rgba(33, 150, 243, 0.9);
     
     transform: translateY(100%);
 
     transition:
-        transform var(--transitions-time) var(--timing-function) var(--delay);
+        transform var(--transitions-time) var(--timing-function) var(--delay),
+        opacity var(--transitions-time) var(--timing-function) var(--delay);
 }
 
 .project-overlay__text {
